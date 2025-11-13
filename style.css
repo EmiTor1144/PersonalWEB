@@ -1,0 +1,13 @@
+body {
+  background-color: #f6f6f6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+h1 {
+  color: #aa1340;
+  position: relative;
+  display: inline-block;
+}
+menu {
+  background-color: #ff69b4;
+  padding: 10px;
+}
