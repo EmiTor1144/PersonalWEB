@@ -4,10 +4,62 @@ body {
 }
 h1 {
   color: #aa1340;
-  position: relative;
-  display: inline-block;
+  text-align: left;
+  margin: 1px 1px;
+  padding: 10px 10px;
 }
-menu {
-  background-color: #ff69b4;
-  padding: 10px;
+.top-margin {
+  background-color: #e1dddf;
+  margin: 0;
+  padding: 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000; /* keep header above page content */
+}
+
+.menu-container {
+  display:flex;
+  margin: 1px 1px;
+  position:static;
+
+}
+/* Custom styling for the Bootstrap button */
+.blog-btn, .shop-btn, .gallery-btn, .projects-btn, .services-btn, .contact-btn {
+  color: #aa1340;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* Optional: hover effect */
+.blog-btn:hover, .shop-btn:hover, .gallery-btn:hover, .projects-btn:hover, .services-btn:hover, .contact-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+  transition: 0.2s ease;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 800px;
+  margin: 100px auto 20px; /* push content below the fixed top bar */
+  background-color: #aa1340;
+}
+
+img {
+  display: block;
+  margin-top: 90px;
+  margin-left: auto;    
+  margin-right: auto;      /* centers the img inside the flex container */
+  max-width: 80%;        /* responsive scaling */
+  height: auto;
+  padding-top: 0;
+  border: 5px solid #aa1340;
+  
 }
