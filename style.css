@@ -5,11 +5,11 @@ body {
 h1 {
   color: #aa1340;
   text-align: left;
-  margin: 1px 1px;
+  margin: 0;            /* remove extra margins so menu can sit next to it */
   padding: 10px 10px;
 }
 .top-margin {
-  background-color: #e1dddf;
+  background-color: #ffffff;
   margin: 0;
   padding: 10px 10px;
   position: fixed;
@@ -18,16 +18,24 @@ h1 {
   right: 0;
   width: 100%;
   z-index: 1000; /* keep header above page content */
+
+  display: flex;        /* place h1 and menu on one line */
+  align-items: center;  /* vertically center them */
+  gap: 12px;            /* small gap between h1 and menu */
 }
 
 .menu-container {
-  display:flex;
-  margin: 1px 1px;
-  position:static;
-
+  display: flex;
+  align-items: center;
+  gap: 8px;         /* spacing between buttons */
+  margin: 0;        /* keep it flush with header line */
+  position: static;
+  /* If you want the menu pushed all the way to the right, add the class "push-right" to the container:
+     .menu-container.push-right { margin-left: auto; }
+  */
 }
 /* Custom styling for the Bootstrap button */
-.blog-btn, .shop-btn, .gallery-btn, .projects-btn, .services-btn, .contact-btn {
+.HOME-btn, .blog-btn, .shop-btn, .gallery-btn, .projects-btn, .services-btn, .contact-btn {
   color: #aa1340;
   font-family: 'Segoe UI', Arial, sans-serif;
   padding: 12px 25px;
@@ -36,8 +44,10 @@ h1 {
 }
 
 /* Optional: hover effect */
-.blog-btn:hover, .shop-btn:hover, .gallery-btn:hover, .projects-btn:hover, .services-btn:hover, .contact-btn:hover {
+.blog-btn:hover, .shop-btn:hover, .gallery-btn:hover, .projects-btn:hover, .services-btn:hover, .contact-btn:hover, .HOME-btn:hover {
   opacity: 0.9;
+  background-color:#aa1340;
+  color:#e1dddf;
   transform: scale(1.03);
   transition: 0.2s ease;
 }
@@ -46,9 +56,9 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 81%;
   height: 800px;
-  margin: 100px auto 20px; /* push content below the fixed top bar */
+  margin: 70px auto 20px; /* push content below the fixed top bar (adjust if your header height changes) */
   background-color: #aa1340;
 }
 
@@ -61,5 +71,4 @@ img {
   height: auto;
   padding-top: 0;
   border: 5px solid #aa1340;
-  
 }
